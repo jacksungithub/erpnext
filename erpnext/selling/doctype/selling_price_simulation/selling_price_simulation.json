@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-20 13:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "item_section",
+  "item_code",
+  "item_name",
+  "description",
+  "column_break_5",
+  "company",
+  "currency",
+  "conversion_rate",
+  "section_break_9",
+  "supplier_offers",
+  "cost_analysis_section",
+  "lowest_cost",
+  "average_cost",
+  "maximum_cost",
+  "column_break_15",
+  "market_price",
+  "customer_target_price",
+  "suggested_selling_price",
+  "pricing_section",
+  "hk_company_cost_usd",
+  "china_vat_rate",
+  "china_selling_price_cny",
+  "column_break_22",
+  "gross_profit_margin",
+  "approval_section",
+  "status",
+  "approved_by",
+  "approval_date",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SPS-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item_code.description",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Conversion Rate",
+   "precision": "9"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Supplier Offers"
+  },
+  {
+   "fieldname": "supplier_offers",
+   "fieldtype": "Table",
+   "label": "Supplier Offers",
+   "options": "Selling Price Simulation Supplier Offer"
+  },
+  {
+   "fieldname": "cost_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Analysis"
+  },
+  {
+   "fieldname": "lowest_cost",
+   "fieldtype": "Currency",
+   "label": "Lowest Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "average_cost",
+   "fieldtype": "Currency",
+   "label": "Average Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "maximum_cost",
+   "fieldtype": "Currency",
+   "label": "Maximum Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_price",
+   "fieldtype": "Currency",
+   "label": "Market Price"
+  },
+  {
+   "fieldname": "customer_target_price",
+   "fieldtype": "Currency",
+   "label": "Customer Target Price"
+  },
+  {
+   "fieldname": "suggested_selling_price",
+   "fieldtype": "Currency",
+   "label": "Suggested Selling Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Multi-Company Pricing"
+  },
+  {
+   "fieldname": "hk_company_cost_usd",
+   "fieldtype": "Currency",
+   "label": "HK Company Cost (USD)",
+   "read_only": 1
+  },
+  {
+   "default": "13",
+   "fieldname": "china_vat_rate",
+   "fieldtype": "Percent",
+   "label": "China VAT Rate (%)"
+  },
+  {
+   "fieldname": "china_selling_price_cny",
+   "fieldtype": "Currency",
+   "label": "China Selling Price (CNY)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_profit_margin",
+   "fieldtype": "Percent",
+   "label": "Gross Profit Margin (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nRejected"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-20 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "Selling Price Simulation",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

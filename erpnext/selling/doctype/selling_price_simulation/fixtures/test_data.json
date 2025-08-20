@@ -1,0 +1,38 @@
+[
+	{
+		"doctype": "Item",
+		"item_code": "ELEC-COMP-001",
+		"item_name": "Electronic Component - Resistor 10K",
+		"item_group": "All Item Groups",
+		"stock_uom": "Nos",
+		"is_stock_item": 1,
+		"description": "10K Ohm Resistor for electronic circuits"
+	},
+	{
+		"doctype": "Item", 
+		"item_code": "ELEC-COMP-002",
+		"item_name": "Electronic Component - Capacitor 100uF",
+		"item_group": "All Item Groups",
+		"stock_uom": "Nos",
+		"is_stock_item": 1,
+		"description": "100 microFarad electrolytic capacitor"
+	},
+	{
+		"doctype": "Supplier",
+		"supplier_name": "Overseas Electronics Ltd",
+		"supplier_group": "All Supplier Groups",
+		"country": "United States"
+	},
+	{
+		"doctype": "Supplier",
+		"supplier_name": "Global Components Inc",
+		"supplier_group": "All Supplier Groups", 
+		"country": "Germany"
+	},
+	{
+		"doctype": "Supplier",
+		"supplier_name": "Asia Pacific Electronics",
+		"supplier_group": "All Supplier Groups",
+		"country": "Singapore"
+	}
+]

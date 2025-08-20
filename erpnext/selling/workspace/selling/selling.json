@@ -48,6 +48,17 @@
    "type": "Link"
   },
   {
+   "dependencies": "Item, Supplier",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Selling Price Simulation",
+   "link_count": 0,
+   "link_to": "Selling Price Simulation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
    "dependencies": "Item, Customer",
    "hidden": 0,
    "is_query_report": 0,
